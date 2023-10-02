@@ -2,27 +2,46 @@
 <html>
 <head> 
 <title>Page Title</title>
-  <style>.cookies {
-  width: 15rem;
-  height: 10rem;  
+  <style>/* Cookie Banner Styles */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
 
-  top:0;
-  position: absolute;
-  display: block;
-  background: rgb(30,30,30);
-  border-radius: 10px;
-  margin-left: calc(50vw - 7.5rem); <!-- used to center it in the width -->
-  margin-top: 20rem;
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-banner button {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
 }</style>
 </head>
 <body>
-<div class="cookies">
-  <a href="/Portfolio/cookies.html">
-    This website uses cookies to look how much you enjoy the time on this website and to track records of how many times you have visited the site to help us improve our site. Get a free cookie on the house
-  </a>
-  <button onclick="close">accept all</button>
-  <button onclick="close">accept necessary</button>
-</div>
+<!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <div class="cookie-buttons">
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 
