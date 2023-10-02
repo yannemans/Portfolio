@@ -49,4 +49,35 @@
 <p>My first paragraph.</p>
 
 </body>
+<script>
+  // JavaScript to handle cookie banner functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookieBanner");
+    const acceptCookiesBtn = document.getElementById("acceptCookies");
+    const declineCookiesBtn = document.getElementById("declineCookies");
+
+    acceptCookiesBtn.addEventListener("click", () => {
+        // Set a cookie to remember user's choice
+        document.cookie = "cookiesAccepted=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+
+        // Hide the cookie banner
+        cookieBanner.style.display = "none";
+    });
+
+    declineCookiesBtn.addEventListener("click", () => {
+        // Set a cookie to remember user's choice
+        document.cookie = "cookiesAccepted=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+
+        // Hide the cookie banner
+        cookieBanner.style.display = "none";
+    });
+
+    // Check if the user has previously accepted or declined cookies
+    const cookiesAccepted = document.cookie.includes("cookiesAccepted=true");
+
+    if (cookiesAccepted) {
+        cookieBanner.style.display = "none";
+    }
+});
+</script>
 </html>
