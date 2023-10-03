@@ -30,7 +30,28 @@
     cursor: pointer;
 }
  a, a:hover, a:active, a:visited { color: white; }
-    
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.frame {
+    width: 300px; /* Adjust the width of the frame */
+    height: 400px; /* Adjust the height of the frame */
+    border: 10px solid #333; /* Frame border color and thickness */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow to the frame */
+}
+
+img {
+    width: 100%; /* Make sure the image takes 100% width of the frame */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any default inline spacing */
+}
+
 }</style>
 </head>
 <body>
@@ -47,6 +68,9 @@
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
+  <div class="frame">
+        <img src="/Portfolio/noor.JPG" alt="Noor">
+    </div>
 
 </body>
 <script>
